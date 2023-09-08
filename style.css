@@ -32,7 +32,6 @@ body {
   color: black;
 }
 
-
 #modal {
   position: relative;
   background-color: #fff;
@@ -48,10 +47,11 @@ body {
   border-radius: 1rem;
   overflow-x: hidden;
 
-  animation: showModal 400ms;
+  animation-name: showModal;
+  animation-duration: 1s;
 }
 
-#close_modal {
+#modal #close_modal {
   position: absolute;
   color: #b07474;
   font-size: 1.5rem;
@@ -104,4 +104,39 @@ input {
 
 #submit_form:hover {
   background-color: #1899e8;
+}
+
+
+
+@keyframes showModal {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    1% {
+        width: 1vw;
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1; 
+       width: 90vw;
+    }
+}
+
+
+@keyframes hideModal {
+    from {
+        width: 90vw;
+        opacity: 1;
+    }
+    1% {
+        width: 89vw;
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0; 
+       width: 0;
+    }
 }
