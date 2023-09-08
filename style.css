@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("background.png") no-repeat center center;
+  background-size: cover;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  font-size: 1.2rem;
+}
+
+#openBtn {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  padding: 1rem 2.2rem;
+  font-size: 2rem;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+#openBtn:hover {
+  background-color: #fff;
+  color: black;
+}
+
+
+#modal {
+  position: relative;
+  background-color: #fff;
+  width: 90vw;
+  max-width: 400px;
+  padding: 1rem 2rem 3rem;
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: center;
+  box-shadow: 0 0 3px black;
+  border-radius: 1rem;
+  overflow-x: hidden;
+
+  animation: showModal 400ms;
+}
+
+#close_modal {
+  position: absolute;
+  color: #b07474;
+  font-size: 1.5rem;
+  padding: 0.2rem 1rem;
+  border-bottom-left-radius: 1rem;
+  border: none;
+  top: 0;
+  right: 0;
+}
+
+#modal #close_modal:hover {
+  color: red;
+  font-weight: 600;
+}
+
+#modal h1 {
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+
+input,
+label {
+  display: block;
+  font-family: inherit;
+  font-size: 1.2rem;
+}
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+label {
+  margin-bottom: 20px;
+}
+input:not(last-child) {
+  margin-top: 10px;
+  padding-inline: 1rem;
+}
+
+input {
+  padding-block: 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d5d5d5;
+  width: 100%;
+}
+
+#submit_form {
+  background-color: #80caf8;
+}
+
+#submit_form:hover {
+  background-color: #1899e8;
+}
